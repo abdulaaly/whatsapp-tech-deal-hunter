@@ -2,79 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+  WhatsApp Design System Tokens (from whatsapp.design.md)
+  - Warm Cream Canvas: #fcf5eb
+  - Encryption Dark Canvas: #111b21
+  - Primary Action Pill: #25d366
+  - Secondary Highlight: #e6ffda
+  - Ink: #1c1e21 (near black)
+  - Ink-Muted: #5e5e5e
+  - Typography: WhatsApp Sans Var / Inter uniform weight 400 throughout
+  - Radii: 50px pills, 25px tiles, 50% circular chips
+*/
+
 :root {
-  --whatsapp-primary: #25d366;
-  --whatsapp-secondary: #e6ffda;
-  --whatsapp-canvas: #fcf5eb;
-  --whatsapp-ink: #1c1e21;
-  --whatsapp-ink-muted: #8696a0;
-  --whatsapp-dark-bg: #111b21;
-  --whatsapp-dark-surface: #202c33;
-  --whatsapp-dark-card: #182229;
-  --whatsapp-dark-bubble: #005c4b;
-  --whatsapp-border: #2a3942;
-  --radius-tile: 25px;
-  --radius-pill: 50px;
+  --wa-primary: #25d366;
+  --wa-primary-hover: #20ba5a;
+  --wa-secondary: #e6ffda;
+  --wa-radius-pill: 50px;
+  --wa-radius-tile: 25px;
+}
+
+/* 1. Official WhatsApp Warm Cream Canvas (as in whatsapp.design.md lines 60-70) */
+body.theme-warm-cream {
+  --wa-canvas: #fcf5eb;
+  --wa-surface: #ffffff;
+  --wa-surface-subtle: #f7f0e6;
+  --wa-surface-elevated: #ffffff;
+  --wa-ink: #1c1e21;
+  --wa-ink-muted: #5e5e5e;
+  --wa-border: rgba(28, 30, 33, 0.12);
+  --wa-card-shadow: 0 4px 20px -2px rgba(28, 30, 33, 0.06);
+  --wa-bubble-bg: #e6ffda;
+  --wa-bubble-text: #1c1e21;
+  background-color: var(--wa-canvas);
+  color: var(--wa-ink);
+}
+
+/* 2. Official WhatsApp Encryption Dark Mode */
+body.theme-encryption-dark {
+  --wa-canvas: #111b21;
+  --wa-surface: #202c33;
+  --wa-surface-subtle: #182229;
+  --wa-surface-elevated: #233138;
+  --wa-ink: #e9edef;
+  --wa-ink-muted: #8696a0;
+  --wa-border: #2a3942;
+  --wa-card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  --wa-bubble-bg: #005c4b;
+  --wa-bubble-text: #e9edef;
+  background-color: var(--wa-canvas);
+  color: var(--wa-ink);
 }
 
 @layer base {
   body {
-    background-color: #111b21;
-    color: #e9edef;
     font-family: "WhatsApp Sans Var", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
-    font-weight: 400;
+    font-weight: 400; /* Uniform weight 400 per WhatsApp design spec */
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400; /* Enforce WhatsApp weight 400 rule */
   }
 }
 
-/* WhatsApp Soft Pill & Tile Styling (from DESIGN.md) */
+/* Reusable WhatsApp Design Tokens */
 .wa-pill {
-  border-radius: 50px;
+  border-radius: var(--wa-radius-pill);
 }
 
 .wa-tile {
-  border-radius: 25px;
+  border-radius: var(--wa-radius-tile);
 }
 
 .wa-card {
-  background-color: #202c33;
-  border-radius: 25px;
-  border: 1px solid #2a3942;
+  background-color: var(--wa-surface);
+  border-radius: var(--wa-radius-tile);
+  border: 1px solid var(--wa-border);
+  box-shadow: var(--wa-card-shadow);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .wa-card:hover {
-  border-color: #25d366;
-  box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.15);
+  border-color: var(--wa-primary);
+  box-shadow: 0 12px 28px -6px rgba(37, 211, 102, 0.2);
 }
 
 .wa-btn-primary {
-  background-color: #25d366;
+  background-color: var(--wa-primary);
   color: #111b21;
-  border-radius: 50px;
-  font-weight: 500;
+  border-radius: var(--wa-radius-pill);
+  font-weight: 400;
+  height: 44px;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
 }
 
 .wa-btn-primary:hover {
-  background-color: #20ba5a;
-  transform: scale(1.02);
+  background-color: var(--wa-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
 }
 
 .wa-btn-secondary {
-  background-color: rgba(37, 211, 102, 0.12);
-  color: #25d366;
-  border: 1px solid rgba(37, 211, 102, 0.3);
-  border-radius: 50px;
+  background-color: transparent;
+  color: var(--wa-ink);
+  border: 1px solid var(--wa-border);
+  border-radius: var(--wa-radius-pill);
+  font-weight: 400;
+  height: 44px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   transition: all 0.2s ease;
 }
 
 .wa-btn-secondary:hover {
-  background-color: rgba(37, 211, 102, 0.2);
+  border-color: var(--wa-primary);
+  color: var(--wa-primary);
+  background-color: rgba(37, 211, 102, 0.08);
 }
 
-/* Audio Waveform Animations for Real-time Voice Call */
+/* Audio Waveform Animations for Real-time Voice AI */
 @keyframes wave-bounce {
   0%, 100% {
     height: 8px;
@@ -87,7 +145,7 @@
 .wave-bar {
   display: inline-block;
   width: 4px;
-  background-color: #25d366;
+  background-color: var(--wa-primary);
   border-radius: 9999px;
   animation: wave-bounce 1s infinite ease-in-out;
 }
@@ -99,21 +157,18 @@
 .wave-bar:nth-child(6) { animation-delay: 0.35s; }
 .wave-bar:nth-child(7) { animation-delay: 0.5s; }
 
-/* Custom WhatsApp Scrollbars */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #111b21;
+  background: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #374248;
+  background: var(--wa-border);
   border-radius: 9999px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #25d366;
+  background: var(--wa-ink-muted);
 }

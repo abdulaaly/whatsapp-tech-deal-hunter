@@ -7,49 +7,53 @@ import {
   ExternalLink, 
   FileText, 
   Smartphone, 
-  Store
+  Store 
 } from 'lucide-react';
 
 interface BuyerVerificationTabProps {
   data: BuyerVerificationData;
+  currencySymbol?: string;
 }
 
-export const BuyerVerificationTab: React.FC<BuyerVerificationTabProps> = ({ data }) => {
+export const BuyerVerificationTab: React.FC<BuyerVerificationTabProps> = ({ 
+  data, 
+  currencySymbol = 'Rs.' 
+}) => {
   return (
     <div className="space-y-6">
       {/* Verification Header Banner */}
-      <div className="glass-panel rounded-3xl p-6 relative overflow-hidden border border-emerald-800/60 bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950/30">
+      <div className="bg-[var(--wa-surface)] rounded-[25px] p-6 relative overflow-hidden border border-[var(--wa-border)] shadow-md">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs uppercase font-extrabold tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
+              <span className="text-xs uppercase font-normal tracking-wider px-3 py-1 rounded-full bg-[#005C4B]/20 text-[#25D366] border border-[#25D366]/30 flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Seller Legitimacy Audit
               </span>
-              <span className="text-xs text-slate-400">
-                Native WinRT OCR & Group Cross-Match Pipeline
+              <span className="text-xs text-[var(--wa-ink-muted)]">
+                Native OCR & Group Participant Cross-Match
               </span>
             </div>
-            <h2 className="text-2xl font-black text-white tracking-tight">
+            <h2 className="text-2xl font-normal text-[var(--wa-ink)] tracking-tight">
               Payment Screenshot Buyer Verification Queue
             </h2>
-            <p className="text-sm text-slate-300 max-w-3xl mt-1 leading-relaxed">
-              Pakistani lot sellers routinely post "Alhamdulillah Sold / Order Confirmed" screenshots from Easypaisa, JazzCash, and Raast with buyer digits partially masked. We cross-reference visible digits against 5,374 group participants to identify genuine buyers, enabling 1-click verification before you send any advance.
+            <p className="text-sm text-[var(--wa-ink-muted)] max-w-3xl mt-1 leading-relaxed">
+              Wholesale lot sellers routinely post "Sold / Advance Received" screenshots with masked buyer digits. We cross-reference visible digits against verified group participants to identify genuine buyers, enabling 1-click verification before you send any advance.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-emerald-500/40 text-center">
-              <div className="text-2xl font-black text-emerald-400">
+            <div className="p-3.5 rounded-[20px] bg-[var(--wa-surface-subtle)] border border-[#25D366]/40 text-center min-w-[130px]">
+              <div className="text-2xl font-normal text-[#25D366]">
                 {data.high_confidence_matches} / {data.total_receipts_audited}
               </div>
-              <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider mt-0.5">
-                90%+ Confidence Matches
+              <div className="text-[10px] text-[var(--wa-ink-muted)] uppercase tracking-wider mt-0.5">
+                90%+ Confidence
               </div>
             </div>
-            <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-700 text-center">
-              <div className="text-2xl font-black text-indigo-400">100%</div>
-              <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider mt-0.5">
+            <div className="p-3.5 rounded-[20px] bg-[var(--wa-surface-subtle)] border border-[var(--wa-border)] text-center min-w-[130px]">
+              <div className="text-2xl font-normal text-[var(--wa-ink)]">100%</div>
+              <div className="text-[10px] text-[var(--wa-ink-muted)] uppercase tracking-wider mt-0.5">
                 Zero-Loss Policy
               </div>
             </div>
@@ -58,20 +62,20 @@ export const BuyerVerificationTab: React.FC<BuyerVerificationTabProps> = ({ data
       </div>
 
       {/* Safety Notice Callout */}
-      <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-3 text-xs text-amber-200">
-        <AlertTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+      <div className="p-4 rounded-[20px] bg-amber-500/10 border border-amber-500/30 flex items-start gap-3 text-xs text-amber-700 dark:text-amber-200">
+        <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
         <div>
-          <strong className="font-bold text-amber-300">Mandatory Verification Protocol: </strong>
-          Wholesale lots carry significant counterparty risk. Before depositing any half-advance to sellers like Al-Raheem Mobile Mart or Online Product Sellar, click <strong>"Verify with Buyer"</strong> below to send a respectful inquiry to the actual customer who previously paid them.
+          <strong className="font-normal text-amber-600 dark:text-amber-300">Mandatory Verification Protocol: </strong>
+          Wholesale lots carry significant counterparty risk. Before depositing any advance to unverified vendors, click <strong>"Verify with Buyer"</strong> below to send a respectful inquiry to the actual customer who previously paid them.
         </div>
       </div>
 
       {/* Verification Queue Table */}
-      <div className="glass-panel rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+      <div className="bg-[var(--wa-surface)] rounded-[25px] overflow-hidden border border-[var(--wa-border)] shadow-md">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse min-w-[1100px]">
             <thead>
-              <tr className="bg-slate-900/95 border-b border-slate-800 text-[11px] uppercase tracking-wider text-slate-400 font-bold">
+              <tr className="bg-[var(--wa-surface-subtle)] border-b border-[var(--wa-border)] text-[11px] uppercase tracking-wider text-[var(--wa-ink-muted)] font-normal">
                 <th className="py-4 px-4 w-28">Receipt ID</th>
                 <th className="py-4 px-4 w-60">Seller & Group</th>
                 <th className="py-4 px-4 w-48">Payment Slip Data</th>
@@ -81,73 +85,73 @@ export const BuyerVerificationTab: React.FC<BuyerVerificationTabProps> = ({ data
                 <th className="py-4 px-4 text-right w-64">1-Click Buyer Inquiry</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/60 text-xs">
+            <tbody className="divide-y divide-[var(--wa-border)] text-xs text-[var(--wa-ink)]">
               {data.verification_receipts.map((receipt: VerificationReceipt) => {
                 const isHighConfidence = receipt.confidence_score >= 90;
                 return (
-                  <tr key={receipt.id} className="hover:bg-slate-800/30 transition-colors">
+                  <tr key={receipt.id} className="hover:bg-[var(--wa-surface-subtle)] transition-colors">
                     {/* ID & Screenshot Ref */}
-                    <td className="py-4 px-4 font-bold text-slate-200">
+                    <td className="py-4 px-4 text-[var(--wa-ink)] font-normal">
                       <div className="flex items-center gap-1.5">
-                        <FileText className="w-3.5 h-3.5 text-indigo-400" />
+                        <FileText className="w-3.5 h-3.5 text-[#25D366]" />
                         <span>{receipt.id}</span>
                       </div>
-                      <div className="text-[10px] text-slate-400 mt-1 truncate max-w-[120px]" title={receipt.receipt_image_ref}>
+                      <div className="text-[10px] text-[var(--wa-ink-muted)] mt-1 truncate max-w-[120px]" title={receipt.receipt_image_ref}>
                         {receipt.receipt_image_ref}
                       </div>
                     </td>
 
                     {/* Seller & Group */}
                     <td className="py-4 px-4">
-                      <div className="font-bold text-white flex items-center gap-1">
-                        <Store className="w-3.5 h-3.5 text-amber-400" />
+                      <div className="text-[var(--wa-ink)] font-normal flex items-center gap-1">
+                        <Store className="w-3.5 h-3.5 text-amber-500" />
                         <span>{receipt.seller_name}</span>
                       </div>
-                      <div className="text-[11px] text-slate-400 mt-0.5">
+                      <div className="text-[11px] text-[var(--wa-ink-muted)] mt-0.5">
                         +{receipt.seller_phone}
                       </div>
-                      <div className="text-[10px] text-indigo-400 mt-1 font-medium">
+                      <div className="text-[10px] text-[#25D366] mt-1 font-normal">
                         {receipt.group_name}
                       </div>
                     </td>
 
                     {/* Payment Slip Info */}
                     <td className="py-4 px-4">
-                      <div className="inline-block px-2 py-0.5 rounded-md font-bold text-[11px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                      <div className="inline-block px-2.5 py-0.5 rounded-full text-[11px] bg-[#005C4B]/20 text-[#25D366] border border-[#25D366]/30">
                         {receipt.wallet_type}
                       </div>
-                      <div className="text-sm font-extrabold text-emerald-400 mt-1">
-                        PKR {receipt.amount_pkr.toLocaleString()}
+                      <div className="text-sm font-normal text-[#25D366] mt-1">
+                        {currencySymbol} {receipt.amount_pkr.toLocaleString()}
                       </div>
-                      <div className="text-[10px] text-slate-400 mt-0.5">
+                      <div className="text-[10px] text-[var(--wa-ink-muted)] mt-0.5">
                         {receipt.item_purchased}
                       </div>
-                      <div className="text-[9px] text-slate-400">
+                      <div className="text-[9px] text-[var(--wa-ink-muted)]">
                         TRX: {receipt.trx_id}
                       </div>
                     </td>
 
                     {/* Extracted Digits */}
                     <td className="py-4 px-4">
-                      <span className="font-mono px-2 py-1 rounded bg-slate-950 border border-slate-700 text-amber-300 text-xs font-semibold">
+                      <span className="font-mono px-2.5 py-1 rounded-full bg-[var(--wa-surface-subtle)] border border-[var(--wa-border)] text-amber-500 text-xs">
                         {receipt.extracted_partial_digits}
                       </span>
-                      <div className="text-[10px] text-slate-400 mt-1">
+                      <div className="text-[10px] text-[var(--wa-ink-muted)] mt-1">
                         {receipt.transaction_timestamp}
                       </div>
                     </td>
 
                     {/* Matched Member */}
                     <td className="py-4 px-4">
-                      <div className="font-bold text-white flex items-center gap-1">
-                        <Smartphone className="w-3.5 h-3.5 text-emerald-400" />
+                      <div className="text-[var(--wa-ink)] font-normal flex items-center gap-1">
+                        <Smartphone className="w-3.5 h-3.5 text-[#25D366]" />
                         <span>{receipt.top_candidate_name}</span>
                       </div>
-                      <div className="font-mono text-slate-300 text-[11px] mt-0.5">
+                      <div className="font-mono text-[var(--wa-ink-muted)] text-[11px] mt-0.5">
                         +{receipt.top_candidate_phone}
                       </div>
-                      <p className="text-[10px] text-slate-400 mt-1 leading-snug">
-                        {receipt.candidate_matches[0].match_reason}
+                      <p className="text-[10px] text-[var(--wa-ink-muted)] mt-1 leading-snug">
+                        {receipt.candidate_matches[0]?.match_reason}
                       </p>
                     </td>
 
@@ -155,16 +159,16 @@ export const BuyerVerificationTab: React.FC<BuyerVerificationTabProps> = ({ data
                     <td className="py-4 px-4">
                       <div className="flex items-center gap-1.5">
                         <span
-                          className={`font-black text-sm px-2.5 py-1 rounded-xl ${
+                          className={`font-normal text-sm px-2.5 py-1 rounded-full ${
                             isHighConfidence
-                              ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40'
-                              : 'bg-amber-500/20 text-amber-400 border border-amber-500/40'
+                              ? 'bg-[#005C4B]/20 text-[#25D366] border border-[#25D366]/40'
+                              : 'bg-amber-500/20 text-amber-500 border border-amber-500/40'
                           }`}
                         >
                           {receipt.confidence_score}%
                         </span>
                       </div>
-                      <span className="text-[10px] text-slate-400 block mt-1">
+                      <span className="text-[10px] text-[var(--wa-ink-muted)] block mt-1">
                         {isHighConfidence ? 'High Certainty' : 'Probable Match'}
                       </span>
                     </td>
@@ -175,13 +179,13 @@ export const BuyerVerificationTab: React.FC<BuyerVerificationTabProps> = ({ data
                         href={receipt.verification_wa_link}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs transition-all shadow-lg shadow-emerald-600/25 ring-1 ring-white/20"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-[#111B21] font-normal text-xs transition-all shadow-md shadow-[#25D366]/20"
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
                         <span>Verify with Buyer</span>
                         <ExternalLink className="w-3 h-3 opacity-70" />
                       </a>
-                      <div className="text-[10px] text-slate-400 mt-1.5 italic max-w-xs ml-auto line-clamp-1" title={receipt.verification_message_text}>
+                      <div className="text-[10px] text-[var(--wa-ink-muted)] mt-1.5 italic max-w-xs ml-auto line-clamp-1" title={receipt.verification_message_text}>
                         "{receipt.verification_message_text.slice(0, 48)}..."
                       </div>
                     </td>

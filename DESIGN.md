@@ -394,5 +394,3 @@ There is no 4px, 8px, 12px, or 16px tier anywhere on the page. The scale skips t
 - **Product surfaces:** this DESIGN.md captures the marketing site at whatsapp.com. The in-product chat UI (web.whatsapp.com, mobile apps) carries a much richer token system — message bubble variants, typing indicators, status colors, voice-call gradients — that is not represented here.
 - **Localized typography:** WhatsApp Sans Var ships variants for Arabic, Devanagari, and CJK scripts that don't appear on the en-US marketing surface captured here.
 - **The mint message bubble color** appears once on the page in an in-product illustration; the full chat-bubble color matrix (incoming bubble fill, system message tint, link color) is not captured.
-
-
