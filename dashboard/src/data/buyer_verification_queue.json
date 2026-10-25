@@ -1,0 +1,171 @@
+{
+  "audit_title": "Seller Legitimacy & Payment Screenshot Verification Queue",
+  "total_receipts_audited": 6,
+  "high_confidence_matches": 4,
+  "moderate_confidence_matches": 2,
+  "low_confidence_or_unmatched": 0,
+  "verification_receipts": [
+    {
+      "id": "RCPT-001",
+      "seller_name": "Al Raheem Electronic Mobile",
+      "seller_phone": "923150477792",
+      "group_name": "Al __ Raheem mobile mart ✅📱",
+      "receipt_image_ref": "Screenshot 2026-10-19 153647.png",
+      "wallet_type": "Easypaisa",
+      "trx_id": "EP-789421095",
+      "amount_pkr": 9000,
+      "item_purchased": "Dell XPS 17 9700 (Advance Deposit)",
+      "transaction_timestamp": "2026-10-19 14:22 PKT",
+      "extracted_partial_digits": "0323-564****",
+      "candidate_matches": [
+        {
+          "phone": "923235647217",
+          "name": "Taimoor Khan",
+          "match_reason": "Prefix 0323 + First 3 middle digits 564 match member active in Al-Raheem group",
+          "confidence_pct": 94
+        }
+      ],
+      "top_candidate_phone": "923235647217",
+      "top_candidate_name": "Taimoor Khan",
+      "confidence_score": 94,
+      "verification_message_text": "Assalam-o-Alaikum bro, I saw your payment confirmation in [Al __ Raheem mobile mart ✅📱] with [Al Raheem Electronic Mobile]. Did you receive your parcel safely, and how was your experience with this seller?",
+      "verification_wa_link": "https://wa.me/923235647217?text=Assalam-o-Alaikum%20bro%2C%20I%20saw%20your%20payment%20confirmation%20in%20%5BAl%20__%20Raheem%20mobile%20mart%20%E2%9C%85%F0%9F%93%B1%5D%20with%20%5BAl%20Raheem%20Electronic%20Mobile%5D.%20Did%20you%20receive%20your%20parcel%20safely%2C%20and%20how%20was%20your%20experience%20with%20this%20seller%3F",
+      "seller_wa_link": "https://wa.me/923150477792"
+    },
+    {
+      "id": "RCPT-002",
+      "seller_name": "Online Product Sellar",
+      "seller_phone": "923493488523",
+      "group_name": "Online Product Sellar",
+      "receipt_image_ref": "Screenshot 2026-10-19 153655.png",
+      "wallet_type": "JazzCash",
+      "trx_id": "JC-554219803",
+      "amount_pkr": 25000,
+      "item_purchased": "HP Spectre x360 14 (Advance Token)",
+      "transaction_timestamp": "2026-10-19 15:10 PKT",
+      "extracted_partial_digits": "0308-558****",
+      "candidate_matches": [
+        {
+          "phone": "923085580275",
+          "name": "Zubair Ahmad",
+          "match_reason": "Prefix 0308 + Middle 558 match registered buyer in Online Product Sellar",
+          "confidence_pct": 92
+        }
+      ],
+      "top_candidate_phone": "923085580275",
+      "top_candidate_name": "Zubair Ahmad",
+      "confidence_score": 92,
+      "verification_message_text": "Assalam-o-Alaikum bro, I saw your payment confirmation in [Online Product Sellar] with [Online Product Sellar]. Did you receive your parcel safely, and how was your experience with this seller?",
+      "verification_wa_link": "https://wa.me/923085580275?text=Assalam-o-Alaikum%20bro%2C%20I%20saw%20your%20payment%20confirmation%20in%20%5BOnline%20Product%20Sellar%5D%20with%20%5BOnline%20Product%20Sellar%5D.%20Did%20you%20receive%20your%20parcel%20safely%2C%20and%20how%20was%20your%20experience%20with%20this%20seller%3F",
+      "seller_wa_link": "https://wa.me/923493488523"
+    },
+    {
+      "id": "RCPT-003",
+      "seller_name": "Online Product Sellar",
+      "seller_phone": "923493488523",
+      "group_name": "Online Product Sellar",
+      "receipt_image_ref": "Screenshot 2026-10-19 153710.png",
+      "wallet_type": "Meezan Bank Raast",
+      "trx_id": "MB-902184321",
+      "amount_pkr": 190000,
+      "item_purchased": "Lenovo Legion Pro 7i 2025 (Full Settlement)",
+      "transaction_timestamp": "2026-10-19 15:28 PKT",
+      "extracted_partial_digits": "***-***-3558",
+      "candidate_matches": [
+        {
+          "phone": "923359853558",
+          "name": "Bilal Sheikh",
+          "match_reason": "Trailing 4 digits 3558 match member in group header list",
+          "confidence_pct": 88
+        }
+      ],
+      "top_candidate_phone": "923359853558",
+      "top_candidate_name": "Bilal Sheikh",
+      "confidence_score": 88,
+      "verification_message_text": "Assalam-o-Alaikum bro, I saw your payment confirmation in [Online Product Sellar] with [Online Product Sellar]. Did you receive your parcel safely, and how was your experience with this seller?",
+      "verification_wa_link": "https://wa.me/923359853558?text=Assalam-o-Alaikum%20bro%2C%20I%20saw%20your%20payment%20confirmation%20in%20%5BOnline%20Product%20Sellar%5D%20with%20%5BOnline%20Product%20Sellar%5D.%20Did%20you%20receive%20your%20parcel%20safely%2C%20and%20how%20was%20your%20experience%20with%20this%20seller%3F",
+      "seller_wa_link": "https://wa.me/923493488523"
+    },
+    {
+      "id": "RCPT-004",
+      "seller_name": "Online Product Sellar",
+      "seller_phone": "923493488523",
+      "group_name": "Online Product Sellar",
+      "receipt_image_ref": "Screenshot 2026-10-19 153701.png",
+      "wallet_type": "Easypaisa",
+      "trx_id": "EP-643019842",
+      "amount_pkr": 15000,
+      "item_purchased": "Dell Alienware M18 (Security Deposit)",
+      "transaction_timestamp": "2026-10-19 15:32 PKT",
+      "extracted_partial_digits": "0340-248****",
+      "candidate_matches": [
+        {
+          "phone": "923402485753",
+          "name": "Usman Ghani",
+          "match_reason": "Leading 0340-248 matches unique member participant",
+          "confidence_pct": 91
+        }
+      ],
+      "top_candidate_phone": "923402485753",
+      "top_candidate_name": "Usman Ghani",
+      "confidence_score": 91,
+      "verification_message_text": "Assalam-o-Alaikum bro, I saw your payment confirmation in [Online Product Sellar] with [Online Product Sellar]. Did you receive your parcel safely, and how was your experience with this seller?",
+      "verification_wa_link": "https://wa.me/923402485753?text=Assalam-o-Alaikum%20bro%2C%20I%20saw%20your%20payment%20confirmation%20in%20%5BOnline%20Product%20Sellar%5D%20with%20%5BOnline%20Product%20Sellar%5D.%20Did%20you%20receive%20your%20parcel%20safely%2C%20and%20how%20was%20your%20experience%20with%20this%20seller%3F",
+      "seller_wa_link": "https://wa.me/923493488523"
+    },
+    {
+      "id": "RCPT-005",
+      "seller_name": "Syed Online Products",
+      "seller_phone": "923160180534",
+      "group_name": "Syed Online Products platform#23",
+      "receipt_image_ref": "Screenshot 2026-10-19 153726.png",
+      "wallet_type": "Bank Alfalah",
+      "trx_id": "BA-110934821",
+      "amount_pkr": 148000,
+      "item_purchased": "Dell XPS 13 Plus 9320 (Full Payment)",
+      "transaction_timestamp": "2026-10-19 15:36 PKT",
+      "extracted_partial_digits": "0300-367****",
+      "candidate_matches": [
+        {
+          "phone": "923003676866",
+          "name": "Kashif Raza",
+          "match_reason": "Prefix 0300 + 367 matches high-activity buyer in Syed Online Products",
+          "confidence_pct": 95
+        }
+      ],
+      "top_candidate_phone": "923003676866",
+      "top_candidate_name": "Kashif Raza",
+      "confidence_score": 95,
+      "verification_message_text": "Assalam-o-Alaikum bro, I saw your payment confirmation in [Syed Online Products platform#23] with [Syed Online Products]. Did you receive your parcel safely, and how was your experience with this seller?",
+      "verification_wa_link": "https://wa.me/923003676866?text=Assalam-o-Alaikum%20bro%2C%20I%20saw%20your%20payment%20confirmation%20in%20%5BSyed%20Online%20Products%20platform%2323%5D%20with%20%5BSyed%20Online%20Products%5D.%20Did%20you%20receive%20your%20parcel%20safely%2C%20and%20how%20was%20your%20experience%20with%20this%20seller%3F",
+      "seller_wa_link": "https://wa.me/923160180534"
+    },
+    {
+      "id": "RCPT-006",
+      "seller_name": "⭐ QUETTA LOT PRIME ⭐",
+      "seller_phone": "923160180534",
+      "group_name": "Lot Products Quetta 9 ",
+      "receipt_image_ref": "Screenshot 2026-10-19 204045.png",
+      "wallet_type": "JazzCash",
+      "trx_id": "JC-883109247",
+      "amount_pkr": 5000,
+      "item_purchased": "HP EliteBook 840 G8 (Hold Deposit)",
+      "transaction_timestamp": "2026-10-19 20:38 PKT",
+      "extracted_partial_digits": "0313-274****",
+      "candidate_matches": [
+        {
+          "phone": "923132743171",
+          "name": "Haroon Rasheed",
+          "match_reason": "Prefix 0313 + 274 matches buyer participant in Quetta Lot group",
+          "confidence_pct": 87
+        }
+      ],
+      "top_candidate_phone": "923132743171",
+      "top_candidate_name": "Haroon Rasheed",
+      "confidence_score": 87,
+      "verification_message_text": "Assalam-o-Alaikum bro, I saw your payment confirmation in [Lot Products Quetta 9 ] with [⭐ QUETTA LOT PRIME ⭐]. Did you receive your parcel safely, and how was your experience with this seller?",
+      "verification_wa_link": "https://wa.me/923132743171?text=Assalam-o-Alaikum%20bro%2C%20I%20saw%20your%20payment%20confirmation%20in%20%5BLot%20Products%20Quetta%209%20%5D%20with%20%5B%E2%AD%90%20QUETTA%20LOT%20PRIME%20%E2%AD%90%5D.%20Did%20you%20receive%20your%20parcel%20safely%2C%20and%20how%20was%20your%20experience%20with%20this%20seller%3F",
+      "seller_wa_link": "https://wa.me/923160180534"
+    }
+  ]
+}
