@@ -1,0 +1,180 @@
+{
+  "summary": {
+    "total_group_messages": 73,
+    "total_media_attachments": 72,
+    "unique_media_shas": 66,
+    "internal_duplicate_groups": 6,
+    "internal_duplicate_messages_count": 12,
+    "redundant_group_messages_removable": 6,
+    "cross_chat_dm_duplicate_media_count": 3,
+    "cross_market_group_duplicates_count": 3
+  },
+  "internal_duplicates": [
+    {
+      "sha256": "DAE79208758DBD1C1EE15824F8C2E423800184173E41041AACD6389E3FDAE9D3",
+      "duplicate_count": 2,
+      "filename": "image_20261022_121054.jpg",
+      "file_size_bytes": 85798,
+      "occurrences": [
+        {
+          "message_id": "ACC58181FCBD9FF9F56371F717DB3225",
+          "timestamp": "2026-10-22 12:10:52 +0500 PKT"
+        },
+        {
+          "message_id": "AC5CC800898420A5184EC2779E3BBAFA",
+          "timestamp": "2026-10-22 13:13:49 +0500 PKT"
+        }
+      ]
+    },
+    {
+      "sha256": "B7A69408B62BCF8D0F3D2F4791A6D1F7AC0789DB9589B8717466B87A16006EB1",
+      "duplicate_count": 2,
+      "filename": "image_20261022_121105.jpg",
+      "file_size_bytes": 148910,
+      "occurrences": [
+        {
+          "message_id": "ACF7885A65CCC85AB89549D3C68839D7",
+          "timestamp": "2026-10-22 12:11:03 +0500 PKT"
+        },
+        {
+          "message_id": "AC902643E8D88CB741C10B0C78A1D368",
+          "timestamp": "2026-10-22 13:13:50 +0500 PKT"
+        }
+      ]
+    },
+    {
+      "sha256": "70373C95ADC9C30869366D296AEA9E5285B9C8125C11C1F2BA70032CF115A471",
+      "duplicate_count": 2,
+      "filename": "image_20261022_121110.jpg",
+      "file_size_bytes": 127663,
+      "occurrences": [
+        {
+          "message_id": "AC6AA759CC5CD52F48C113DC6B5A8D7D",
+          "timestamp": "2026-10-22 12:11:08 +0500 PKT"
+        },
+        {
+          "message_id": "AC4ACF35F8AC88F6E685882F919DCBBB",
+          "timestamp": "2026-10-22 13:13:51 +0500 PKT"
+        }
+      ]
+    },
+    {
+      "sha256": "1FAFFCA25BDBB29D28152DA4095B4137A46FE1D934BC0436D9E2C292570A6D57",
+      "duplicate_count": 2,
+      "filename": "image_20261022_121117.jpg",
+      "file_size_bytes": 108202,
+      "occurrences": [
+        {
+          "message_id": "AC2F8F6ADBE63361357F111ADD9BFA20",
+          "timestamp": "2026-10-22 12:11:16 +0500 PKT"
+        },
+        {
+          "message_id": "AC16AB4C0C7F2399D2EDEBC1223501A3",
+          "timestamp": "2026-10-22 13:13:51 +0500 PKT"
+        }
+      ]
+    },
+    {
+      "sha256": "761892AA30AA3CFC4B054A0796ACD6BE8279129B48F4A961F6AA4C261B7C6663",
+      "duplicate_count": 2,
+      "filename": "image_20261022_121124.jpg",
+      "file_size_bytes": 248259,
+      "occurrences": [
+        {
+          "message_id": "AC1372D557B4C3C79D0A17FABEECA5AB",
+          "timestamp": "2026-10-22 12:11:22 +0500 PKT"
+        },
+        {
+          "message_id": "ACC3F052DD789193E1954CC16BB6EDA9",
+          "timestamp": "2026-10-22 13:13:52 +0500 PKT"
+        }
+      ]
+    },
+    {
+      "sha256": "A3F9D01719C60956F1D4A2777BA30A60D5A140D444B38656B1BBE25ACFE2B286",
+      "duplicate_count": 2,
+      "filename": "image_20261022_121139.jpg",
+      "file_size_bytes": 103933,
+      "occurrences": [
+        {
+          "message_id": "AC06D13748C3FEC7FB86C789B5584012",
+          "timestamp": "2026-10-22 12:11:38 +0500 PKT"
+        },
+        {
+          "message_id": "ACA1A8609F3CECEAB0FA5815AA50F185",
+          "timestamp": "2026-10-22 13:13:52 +0500 PKT"
+        }
+      ]
+    }
+  ],
+  "cross_chat_duplicates_with_dm": [
+    {
+      "dm_id": "AC52EE566DB8FCD8B8A367BD9F0F3814",
+      "dm_timestamp": "2026-10-22 10:53:24 +0500 PKT",
+      "sha256": "EE779037F580FF7ADFEDC357A5EB8D0E1A6F99A83675E40AC566D1F3BDEF454F",
+      "filename": "image_20261022_105327.jpg",
+      "shared_with_group_ids": [
+        "AC12A615B39A577BA817C287EA91C7F0"
+      ],
+      "group_timestamps": [
+        "2026-10-22 10:51:56 +0500 PKT"
+      ]
+    },
+    {
+      "dm_id": "AC5F8016B4B7B32D50CECA79BC951DB2",
+      "dm_timestamp": "2026-10-22 10:53:24 +0500 PKT",
+      "sha256": "82953FEC882F23900694DB1660A6E793292B298D3913868A66D52B0A7D50220F",
+      "filename": "image_20261022_105327.jpg",
+      "shared_with_group_ids": [
+        "ACDB6C232724F2C4733339E8602BAD79"
+      ],
+      "group_timestamps": [
+        "2026-10-22 10:52:04 +0500 PKT"
+      ]
+    },
+    {
+      "dm_id": "AC28C2CD4356D9A98BA1FD1FEDA190A3",
+      "dm_timestamp": "2026-10-22 10:53:24 +0500 PKT",
+      "sha256": "D58E620E56541AC9158EB9BBCBD2B9987817AB2AF666B1BF22FBC1FB9B1566DE",
+      "filename": "image_20261022_105328.jpg",
+      "shared_with_group_ids": [
+        "ACAF82E23EAD69793795BE28426913E2"
+      ],
+      "group_timestamps": [
+        "2026-10-22 10:52:06 +0500 PKT"
+      ]
+    }
+  ],
+  "cross_market_duplicates_with_other_groups": [
+    {
+      "sha256": "EE779037F580FF7ADFEDC357A5EB8D0E1A6F99A83675E40AC566D1F3BDEF454F",
+      "al_raheem_msgs": [
+        "AC12A615B39A577BA817C287EA91C7F0"
+      ],
+      "external_chats": [
+        "83877188120594@lid"
+      ],
+      "external_count": 1
+    },
+    {
+      "sha256": "82953FEC882F23900694DB1660A6E793292B298D3913868A66D52B0A7D50220F",
+      "al_raheem_msgs": [
+        "ACDB6C232724F2C4733339E8602BAD79"
+      ],
+      "external_chats": [
+        "83877188120594@lid"
+      ],
+      "external_count": 1
+    },
+    {
+      "sha256": "D58E620E56541AC9158EB9BBCBD2B9987817AB2AF666B1BF22FBC1FB9B1566DE",
+      "al_raheem_msgs": [
+        "ACAF82E23EAD69793795BE28426913E2"
+      ],
+      "external_chats": [
+        "83877188120594@lid"
+      ],
+      "external_count": 1
+    }
+  ]
+}

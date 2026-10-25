@@ -10,7 +10,8 @@ import {
   Moon, 
   Building2, 
   UploadCloud, 
-  Radio 
+  Radio,
+  ShoppingBag
 } from 'lucide-react';
 import type { BusinessProfile } from '../types/business';
 
@@ -31,6 +32,7 @@ interface HeaderProps {
   onOpenBusinessModal: () => void;
   onOpenImportModal: () => void;
   onOpenLiveFeed: () => void;
+  onOpenAlRahimModal: () => void;
   onSyncNow: () => void;
   isSyncing: boolean;
   isLiveServerOnline: boolean;
@@ -53,6 +55,7 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenBusinessModal,
   onOpenImportModal,
   onOpenLiveFeed,
+  onOpenAlRahimModal,
   onSyncNow,
   isSyncing,
   isLiveServerOnline,
@@ -132,6 +135,16 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <UploadCloud className="w-3.5 h-3.5 text-[#25D366]" />
               <span className="hidden sm:inline">Import Chat</span>
+            </button>
+
+            {/* Al-Rahim Mobile Market & Shopify Store Generator */}
+            <button
+              onClick={onOpenAlRahimModal}
+              className="px-3 py-2 rounded-full border border-[#25D366]/40 bg-[#25D366]/10 text-[var(--wa-ink)] hover:bg-[#25D366]/20 text-xs font-normal transition-all flex items-center gap-1.5"
+              title="Al-Rahim Mobile Market (73 WhatsApp messages, 6 Dups, Shopify Store Export)"
+            >
+              <ShoppingBag className="w-3.5 h-3.5 text-[#25D366]" />
+              <span className="hidden md:inline font-normal">Al-Rahim & Shopify</span>
             </button>
 
             {/* Business Niche Configurator */}

@@ -154,6 +154,57 @@ class LiveSyncHandler(http.server.BaseHTTPRequestHandler):
                 self._set_headers(404)
                 self.wfile.write(json.dumps({"error": "Deals dataset not found"}).encode('utf-8'))
 
+        elif path == '/api/al-raheem/data':
+            # Return live Al-Rahim group audit & Shopify store summary
+            matrix_path = os.path.join(PROJECT_DIR, "exports", "al_raheem", "duplication_matrix.json")
+            manifest_path = os.path.join(PROJECT_DIR, "exports", "al_raheem", "shopify_store_manifest.json")
+            seller_path = os.path.join(PROJECT_DIR, "exports", "al_raheem", "seller_verification_profile.json")
+            
+            data = {"success": True}
+            if os.path.exists(matrix_path):
+                with open(matrix_path, "r", encoding="utf-8") as f:
+                    data["duplication"] = json.load(f)
+            if os.path.exists(manifest_path):
+                with open(manifest_path, "r", encoding="utf-8") as f:
+                    data["shopify_manifest"] = json.load(f)
+            if os.path.exists(seller_path):
+                with open(seller_path, "r", encoding="utf-8") as f:
+                    data["seller_profile"] = json.load(f)
+
+            self._set_headers(200)
+            self.wfile.write(json.dumps(data, indent=2).encode('utf-8'))
+
+        elif path == '/api/al-raheem/export':
+            zip_path = os.path.join(PROJECT_DIR, "al_raheem_mobile_market_export.zip")
+            if os.path.exists(zip_path):
+                with open(zip_path, 'rb') as f:
+                    content = f.read()
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/zip')
+                self.send_header('Content-Disposition', 'attachment; filename="al_raheem_mobile_market_export.zip"')
+                self.send_header('Content-Length', str(len(content)))
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(content)
+            else:
+                self._set_headers(404)
+                self.wfile.write(json.dumps({"error": "Zip export not found"}).encode('utf-8'))
+
+        elif path == '/api/al-raheem/shopify.csv':
+            csv_path = os.path.join(PROJECT_DIR, "exports", "al_raheem", "shopify_products_import.csv")
+            if os.path.exists(csv_path):
+                with open(csv_path, 'r', encoding='utf-8') as f:
+                    content = f.read().encode('utf-8')
+                self.send_response(200)
+                self.send_header('Content-Type', 'text/csv; charset=utf-8')
+                self.send_header('Content-Disposition', 'attachment; filename="shopify_products_import.csv"')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(content)
+            else:
+                self._set_headers(404)
+                self.wfile.write(json.dumps({"error": "Shopify CSV not found"}).encode('utf-8'))
+
         else:
             self._set_headers(404)
             self.wfile.write(json.dumps({"error": "Not found"}).encode('utf-8'))

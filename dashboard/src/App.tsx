@@ -12,6 +12,7 @@ import { VoiceAIAssistant } from './components/VoiceAIAssistant';
 import { BusinessProfileModal } from './components/BusinessProfileModal';
 import { ChatImportModal } from './components/ChatImportModal';
 import { LiveMessageFeedDrawer } from './components/LiveMessageFeedDrawer';
+import { AlRahimExportModal } from './components/AlRahimExportModal';
 
 export function App() {
   // Theme state: defaults to official WhatsApp Warm Cream (#fcf5eb) per whatsapp.design.md
@@ -42,6 +43,7 @@ export function App() {
   const [isBusinessModalOpen, setIsBusinessModalOpen] = useState<boolean>(false);
   const [isImportModalOpen, setIsImportModalOpen] = useState<boolean>(false);
   const [isLiveFeedOpen, setIsLiveFeedOpen] = useState<boolean>(false);
+  const [isAlRahimModalOpen, setIsAlRahimModalOpen] = useState<boolean>(false);
 
   // Apply theme class to <body>
   useEffect(() => {
@@ -165,6 +167,7 @@ export function App() {
         onOpenBusinessModal={() => setIsBusinessModalOpen(true)}
         onOpenImportModal={() => setIsImportModalOpen(true)}
         onOpenLiveFeed={() => setIsLiveFeedOpen(true)}
+        onOpenAlRahimModal={() => setIsAlRahimModalOpen(true)}
         onSyncNow={handleSyncNow}
         isSyncing={isSyncing}
         isLiveServerOnline={isLiveServerOnline}
@@ -172,6 +175,28 @@ export function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 lg:px-8 pb-16">
+        {/* Real WhatsApp SQLite Group Spotlight Banner */}
+        <div className="mb-4 p-3.5 rounded-[20px] border border-[#25D366]/40 bg-[#25D366]/10 flex flex-col sm:flex-row items-center justify-between gap-3 transition-all">
+          <div className="flex items-center gap-3">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse shrink-0" />
+            <div className="text-xs">
+              <span className="font-normal text-[var(--wa-ink)]">
+                🔥 Real WhatsApp Group Spotlight: <strong>Al __ Raheem mobile mart ✅📱</strong> (Quetta Russi Market Godam #65)
+              </span>
+              <span className="text-[var(--wa-ink-muted)] block sm:inline sm:ml-2">
+                73 Ingested SQLite Messages • 6 Duplicate Bursts Pruned • Ready-to-Import Shopify Catalog
+              </span>
+            </div>
+          </div>
+          <button
+            onClick={() => setIsAlRahimModalOpen(true)}
+            className="px-4 py-1.5 rounded-full bg-[#25D366] text-[#111B21] hover:bg-[#20ba5a] text-xs font-normal flex items-center gap-1.5 shadow-md shadow-[#25D366]/20 transition-all shrink-0 cursor-pointer"
+          >
+            <span>View Duplication Audit & Shopify Store</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+
         {/* Category Navigation Bar */}
         <CategoryTabs
           activeTab={activeTab}
@@ -234,6 +259,12 @@ export function App() {
         onSyncNow={handleSyncNow}
         isSyncing={isSyncing}
         totalDbMessages={totalDbMessages}
+      />
+
+      {/* Al-Rahim Mobile Market & Shopify Store Builder Modal */}
+      <AlRahimExportModal
+        isOpen={isAlRahimModalOpen}
+        onClose={() => setIsAlRahimModalOpen(false)}
       />
 
       {/* Voice AI Assistant Modal */}

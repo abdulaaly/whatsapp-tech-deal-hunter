@@ -1,0 +1,20 @@
+{
+  "seller_id": "83877188120594",
+  "resolved_phone": "+923150477792",
+  "push_name": "Muhammad Hamza",
+  "trade_name": "Al __ Raheem mobile mart ✅📱",
+  "registered_address": "Quetta RUSSI market Pakistan godam number 65 Al Raheem electronic mobile 📲",
+  "hub": "Quetta Russi Market",
+  "payment_verification_policy": "New customer say haff payment advance ha (50% Advance Booking)",
+  "whatsapp_click_to_chat": "https://wa.me/923150477792?text=Assalam-o-Alaikum%20Hamza%20bhai%2C%20Al-Rahim%20Mobile%20Mart%20ka%20stock%20check%20karna%20hai",
+  "risk_audit": {
+    "score": 88,
+    "classification": "VERIFIED_WHOLESALE_MERCHANT",
+    "flags": [
+      "Advance payment required",
+      "Physical shop in Quetta Godam 65 confirmed",
+      "Repeated burst posting pattern detected"
+    ],
+    "advice_to_buyers": "Always request live video call verification of product serial number before sending 50% deposit."
+  }
+}

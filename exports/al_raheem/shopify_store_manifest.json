@@ -1,0 +1,66 @@
+{
+  "store_name": "Al-Rahim Tech Mart | Quetta Wholesale Hub",
+  "store_domain_suggestion": "alrahimmobilemart.pk",
+  "primary_currency": "PKR",
+  "currency_symbol": "Rs",
+  "contact_information": {
+    "owner_name": "Muhammad Hamza",
+    "whatsapp_phone": "+923150477792",
+    "physical_location": "Godam #65, Al Raheem Electronic Mobile, Quetta Russi Market, Balochistan, Pakistan",
+    "verification_status": "COMMUNITY_VERIFIED_DEPOSIT_TRADER"
+  },
+  "collections": [
+    {
+      "title": "Quetta Lot Laptops & Workstations",
+      "handle": "laptops-workstations",
+      "description": "High-performance business and gaming laptops imported directly from international lot auctions.",
+      "rules": [
+        {
+          "column": "type",
+          "relation": "contains",
+          "condition": "Laptop"
+        }
+      ]
+    },
+    {
+      "title": "Flagship Smart Devices",
+      "handle": "flagship-smartphones",
+      "description": "Premium Grade-A smartphones from Apple, Samsung, Google Pixel, and OnePlus.",
+      "rules": [
+        {
+          "column": "type",
+          "relation": "contains",
+          "condition": "Phone"
+        }
+      ]
+    },
+    {
+      "title": "Dell XPS Power Series",
+      "handle": "dell-xps-series",
+      "description": "Dell XPS 13, 15, and 17 inch precision laptops with 4K touch displays.",
+      "rules": [
+        {
+          "column": "tag",
+          "relation": "equals",
+          "condition": "XPS"
+        }
+      ]
+    }
+  ],
+  "payment_methods_configured": [
+    {
+      "name": "Bank Transfer (HBL / Meezan Bank)",
+      "instructions": "50% advance for dispatch booking. Send receipt on WhatsApp: +92 315 0477792"
+    },
+    {
+      "name": "Easypaisa / JazzCash Direct",
+      "instructions": "Instant payment verification with digital receipt upload"
+    },
+    {
+      "name": "Cash on Delivery (Courier)",
+      "instructions": "Available for Karachi, Lahore, Islamabad with advance delivery slip deposit"
+    }
+  ],
+  "total_products_imported": 6,
+  "total_product_images": 28
+}
